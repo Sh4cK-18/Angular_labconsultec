@@ -14,22 +14,48 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+ 
+  it('should return Fizz', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app.multiplos(3)).toEqual('Fizz');
   });
 
-  it(`should have as title 'my-app'`, () => {
+  it('should return Buzz', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('my-app');
+    expect(app.multiplos(5)).toEqual('Buzz');
   });
 
-  it('should render title', () => {
+  it('should return FizzBuzz', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('my-app app is running!');
+    const app = fixture.componentInstance;
+    expect(app.multiplos(15)).toEqual('fizzbuzz');
   });
+
+  it('should return number', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.multiplos(7)).toEqual(7);
+  });
+
+  it('should return number', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.multiplos(11)).toEqual(11);
+  });
+
+  it('should return number', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.multiplos(13)).toEqual(13);
+  });
+
+  it('should return number', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.multiplos(17)).toEqual(17);
+  });
+
+
 });
