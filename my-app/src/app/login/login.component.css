@@ -35,19 +35,36 @@
 
 #box2{
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #aside-text-down{
     text-align: center;
     color: white;
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 #create-key-text {
     font-size: 14px;
     text-decoration: none;
     color: black;
+}
+
+#aside-text-up-box2{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+#register-now{
+    color: #00ABEB;
+    text-decoration: none;
+    text-align: center;
 }
 
 
