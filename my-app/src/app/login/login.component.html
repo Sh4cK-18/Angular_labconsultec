@@ -1,27 +1,9 @@
 <div class="main-container">
   <div id="grid-container">
-    <div class="up-container">
-      <div id="box1">
-        <div>
-          <img src="./assets/Logo_Consultec.png" width="140px" height="50px" />
-        </div>
-        <div>
-          <h2 id="aside-text">
-            Te damos la bienvenida al portal Personal Banking
-          </h2>
-        </div>
-        <div>
-          <p id="aside-text-down">¿Eres nuevo en el banco?</p>
-          <a id="create-key-text" href="#">Crea tu clave</a>
-        </div>
-      </div>
-      <div id="down-container">
-        <div>
-          <p id="aside-text-up-box2">¿Aún no tienes una cuenta?</p>
-          <a id="register-now" href="#">Registrate ahora</a>
-        </div>
-      </div>
-    </div>
+    <app-barra-lateral
+      [asideText]="'¿Aún no tienes una cuenta?'"
+      [registerText]="'Registrate ahora'"
+    ></app-barra-lateral>
     <div id="box2">
       <div id="main-login">
         <div class="text-signin">
@@ -57,11 +39,15 @@
         </form>
       </div>
       <div id="text-trouble">
-        <span id="trobule-message">¿Tienes problemas con tu cuenta?<span id="recovery-message"> Recuperar contraseña</span></span>
+        <span id="trobule-message"
+          >¿Tienes problemas con tu cuenta?<span id="recovery-message">
+            Recuperar contraseña</span
+          ></span
+        >
       </div>
       <div id="login-btn">
         <div>
-            <button id="login-button">Iniciar sesión</button>
+          <button id="login-button">Iniciar sesión</button>
         </div>
       </div>
     </div>
