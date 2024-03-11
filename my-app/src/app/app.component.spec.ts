@@ -15,47 +15,12 @@ describe('AppComponent', () => {
   });
 
  
-  it('should return Fizz', () => {
+  it('verificarNumero', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.multiplos(3)).toEqual('Fizz');
+    app.verificarNumero(0, 0, 14);
+    expect(app).toBeTruthy(); 
   });
-
-  it('should return Buzz', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.multiplos(5)).toEqual('Buzz');
-  });
-
-  it('should return FizzBuzz', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.multiplos(15)).toEqual('fizzbuzz');
-  });
-
-  it('should return number', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.multiplos(7)).toEqual(7);
-  });
-
-  it('should return number', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.multiplos(11)).toEqual(11);
-  });
-
-  it('should return number', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.multiplos(13)).toEqual(13);
-  });
-
-  it('should return number', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.multiplos(17)).toEqual(17);
-  });
-
+  
 
 });

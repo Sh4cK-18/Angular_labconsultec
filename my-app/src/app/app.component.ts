@@ -7,22 +7,36 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  //probar el unit test multiplos pasando numero como parametro
-  multiplos(numero: number): string | number {
-    if (numero % 3 === 0 && numero % 5 === 0) {
-      return 'fizzbuzz';
-    } else if (numero % 3 === 0) {
-      return 'Fizz';
-    } else if (numero % 5 === 0) {
-      return 'Buzz';
-    } else {
-      return numero;
-    }
-  }
 
-  //retorna por consola
-  consoleLog(numero: number): void {
-    console.log(this.multiplos(numero));
+
+/********************************************************* */
+ esPrimo(num: number, i: number = 2): boolean{
+  if(num < 2) return false;
+  if(num === 2) return true;
+  if(num % i === 0) return false;
+  return this.esPrimo(num, i + 1);
+ }
+
+ esFibonacci(num: number, a: number = 0, b: number = 1): boolean{
+  if(a === num) return true;
+  if(a > num) return false;
+  return this.esFibonacci(num, b, a + b);
+ }
+
+ esPar(num: number): boolean{
+  return num % 2 === 0;
+ }
+
+ verificarNumero(num: number, count: number = 0, maxCount: number = 10){
+  const esPrimoNum = this.esPrimo(num) ? 'es primo' : 'no es primo';
+  const esFibonacciNum = this.esFibonacci(num) ? 'es fibonacci' : 'no es fibonacci';
+  const esParNum = this.esPar(num) ? 'es par' : 'no es par';
+
+  console.log(`${num} ${esPrimoNum}, ${esFibonacciNum} y ${esParNum}`);
+  if (count < maxCount) {
+    this.verificarNumero(num + 1, count + 1, maxCount);
   }
+}
+
   
 }

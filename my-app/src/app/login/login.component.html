@@ -4,52 +4,6 @@
       [asideText]="'¿Aún no tienes una cuenta?'"
       [registerText]="'Registrate ahora'"
     ></app-barra-lateral>
-    <div id="box2">
-      <div id="main-login">
-        <div class="text-signin">
-          <span id="start-text"
-            >Inicio de<span id="session-text"> sesión</span></span
-          >
-        </div>
-      </div>
-      <div id="signin-form">
-        <form>
-          <div id="inputs-form">
-            <input
-              type="email"
-              id="email"
-              placeholder="Ingresa tu correo electrónico"
-              required
-            />
-            <div class="input-container">
-              <input
-                type="password"
-                id="password"
-                placeholder="Ingresa tu clave de internet"
-                required
-              />
-              <img
-                src="./assets/eye.png"
-                width="20px"
-                height="20px"
-                class="input-icon"
-              />
-            </div>
-          </div>
-        </form>
-      </div>
-      <div id="text-trouble">
-        <span id="trobule-message"
-          >¿Tienes problemas con tu cuenta?<span id="recovery-message">
-            Recuperar contraseña</span
-          ></span
-        >
-      </div>
-      <div id="login-btn">
-        <div>
-          <button id="login-button">Iniciar sesión</button>
-        </div>
-      </div>
-    </div>
+    <app-form></app-form>
   </div>
 </div>

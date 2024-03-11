@@ -1,0 +1,87 @@
+<div id="box2">
+  <div id="main-login">
+    <div class="text-signin">
+      <span id="start-text"
+        >{{ tipoFormulario === "login" ? "Inicio de sesión" : "Crea una cuenta"
+        }}<span id="session-text"></span
+      ></span>
+    </div>
+  </div>
+  <div id="signin-form">
+    <form>
+      <div id="inputs-form">
+        <div *ngIf="tipoFormulario === 'login'">
+        <input
+          type="email"
+          id="email"
+          placeholder="Ingresa tu correo electrónico"
+          required
+        />
+        <div class="input-container">
+          <input
+            type="password"
+            id="password"
+            placeholder="Ingresa tu clave de internet"
+            required
+          />
+          <img
+            src="./assets/eye.png"
+            width="20px"
+            height="20px"
+            class="input-icon"
+          />
+        </div>
+    </div>
+      </div>
+      <div *ngIf="tipoFormulario === 'registro'">
+        <div id="inputs-form">
+          <input
+            type="text"
+            id="name"
+            placeholder="Ingresa tu nombre"
+            required
+          />
+          <input
+            type="text"
+            id="lastname"
+            placeholder="Ingresa tu apellido"
+            required
+          />
+          <input type="text" id="DNI" placeholder="Ingresa tu DNI" required />
+          <input
+            type="date"
+            id="fecha"
+            placeholder="Ingresa tu fecha de nacimiento"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Ingresa tu contraseña"
+            required
+          />
+          <input
+            type="password"
+            id="password2"
+            placeholder="Confirma tu contraseña"
+            required
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="tipoFormulario === 'login'">
+    <div id="text-trouble">
+      <span id="trobule-message"
+        >¿Tienes problemas con tu cuenta?<span id="recovery-message">
+          Recuperar contraseña</span
+        ></span
+      >
+    </div>
+  </div>
+  <div id="login-btn">
+    <div>
+        <button id="login-button" type="submit">{{ tipoFormulario === 'login' ? 'Iniciar sesión' : 'Registrarse' }}</button>
+    </div>
+  </div>
+</div>
